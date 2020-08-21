@@ -13,6 +13,11 @@ public class GameScene : MonoBehaviour
         Battle.Init(CallBack_Ready, CallBack_Game, CallBack_Wave, CallBack_Result);
     }
 
+    private void Start()
+    {
+        Battle.SetReady();
+    }
+
     private void Update()
     {
         Battle.OnUpdate();
@@ -26,7 +31,7 @@ public class GameScene : MonoBehaviour
 
     void CallBack_Game()
     {
-
+        m_GameUi.Init();
     }
 
     void CallBack_Wave()
@@ -38,4 +43,5 @@ public class GameScene : MonoBehaviour
     {
 
     }
+
 }

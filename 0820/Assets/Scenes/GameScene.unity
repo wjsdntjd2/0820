@@ -955,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 5
   m_Hp: 10
+  m_isOn: 0
 --- !u!1 &420848727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 639142966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2078219763}
   m_RootOrder: 0
@@ -1472,6 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687895912}
   - component: {fileID: 687895913}
+  - component: {fileID: 687895914}
   m_Layer: 0
   m_Name: Turret (1)
   m_TagString: Player
@@ -1591,6 +1593,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &687895914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687895911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046c39ee9c19fb748b3e578a304e4d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Body: {fileID: 439635730}
+  m_Target: {fileID: 7276024555155861743}
+  m_isOn: 0
+  m_Bullet: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
+  m_Muzzel: {fileID: 899389006}
+  m_BulletParent: {fileID: 1909719699}
+  m_MinMax: {x: 1.5, y: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1827,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a4b720a715f60459011b5579966246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Turrets:
+  - {fileID: 7632359543704279957}
+  - {fileID: 687895914}
+  - {fileID: 726491116}
+  - {fileID: 1634988862}
+  m_Player: {fileID: 363047485}
 --- !u!1 &726491113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,6 +1843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726491114}
   - component: {fileID: 726491115}
+  - component: {fileID: 726491116}
   m_Layer: 0
   m_Name: Turret (2)
   m_TagString: Player
@@ -1935,6 +1963,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &726491116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726491113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046c39ee9c19fb748b3e578a304e4d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Body: {fileID: 1269722804}
+  m_Target: {fileID: 7276024555155861743}
+  m_isOn: 0
+  m_Bullet: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
+  m_Muzzel: {fileID: 639142967}
+  m_BulletParent: {fileID: 1909719699}
+  m_MinMax: {x: 1.5, y: 3}
 --- !u!1 &899389005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +2010,7 @@ Transform:
   m_GameObject: {fileID: 899389005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 337686364}
   m_RootOrder: 0
@@ -2430,7 +2477,7 @@ Transform:
   m_GameObject: {fileID: 1271396009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140138831}
   m_RootOrder: 0
@@ -2539,6 +2586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634988860}
   - component: {fileID: 1634988861}
+  - component: {fileID: 1634988862}
   m_Layer: 0
   m_Name: Turret (3)
   m_TagString: Player
@@ -2658,6 +2706,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1634988862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634988859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046c39ee9c19fb748b3e578a304e4d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Body: {fileID: 567051599}
+  m_Target: {fileID: 7276024555155861743}
+  m_isOn: 0
+  m_Bullet: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
+  m_Muzzel: {fileID: 1271396010}
+  m_BulletParent: {fileID: 1909719699}
+  m_MinMax: {x: 1.5, y: 3}
 --- !u!1 &1661366126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,8 +3115,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4762269354316448860}
+  m_Children: []
   m_Father: {fileID: 726475564}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3411,72 +3477,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832d2e1ad123ac84fa595a1499fa0104, type: 3}
---- !u!1001 &4653039944734965482
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1909719699}
-    m_Modifications:
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_Name
-      value: Bullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5592521fc4bd97499f854255366b578, type: 3}
---- !u!4 &4762269354316448860 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 181289204895169206, guid: d5592521fc4bd97499f854255366b578, type: 3}
-  m_PrefabInstance: {fileID: 4653039944734965482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7276024555155861743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7712350036785294788, guid: 832d2e1ad123ac84fa595a1499fa0104, type: 3}
@@ -3604,6 +3604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7632359543704279954}
   - component: {fileID: 7632359543704279956}
+  - component: {fileID: 7632359543704279957}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Player
@@ -3707,6 +3708,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7632359543704279957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632359543704279955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046c39ee9c19fb748b3e578a304e4d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Body: {fileID: 7632359544572594942}
+  m_Target: {fileID: 7276024555155861743}
+  m_isOn: 0
+  m_Bullet: {fileID: 209921329814913925, guid: d5592521fc4bd97499f854255366b578, type: 3}
+  m_Muzzel: {fileID: 7632359544764203842}
+  m_BulletParent: {fileID: 1909719699}
+  m_MinMax: {x: 1.5, y: 3}
 --- !u!1 &7632359544507865272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,7 +3983,7 @@ Transform:
   m_GameObject: {fileID: 7632359544764203843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.52, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7632359544507865279}
   m_RootOrder: 0
